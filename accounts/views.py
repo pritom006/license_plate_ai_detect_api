@@ -19,7 +19,6 @@ class RegisterApi(APIView):
         try:
             data = request.data
             email = data.get('email')
-
             user = User.objects.filter(email=email).first()
 
             if user:
